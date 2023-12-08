@@ -1,0 +1,15 @@
+{
+  "editor.defaultFormatter": "jnbt.vscode-rufo",
+  "editor.formatOnSave": true,
+  "rufo.exe": "rufo",  // can be an absolute path
+  "rufo.useBundler": false,
+
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.html.erb": "erb"
+  },
+  "vscode-erb-beautify.executePath": "/home/ubuntu/.asdf/shims/htmlbeautifier"
+}

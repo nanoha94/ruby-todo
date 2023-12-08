@@ -1,27 +1,26 @@
-<div id="<%= dom_id task %>">
-  <p>
-    <strong>Title:</strong>
-    <%= task.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= task.description %>
-  </p>
-
-  <p>
-    <strong>Start time:</strong>
-    <%= task.start_time %>
-  </p>
-
-  <p>
-    <strong>End time:</strong>
-    <%= task.end_time %>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <%= task.status %>
-  </p>
-
+<div class="row">
+  <div class="col-md-8">
+    <table id="<%= dom_id task %>" class="table table-bordered">
+      <tr>
+        <th>Title:</th>
+        <td><%= link_to_if params[:action] == "index", task.title, task %></td>
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <td><%= task.description %></td>
+      </tr>
+      <tr>
+        <th>Start time:</th>
+        <td><%= task.start_time %></td>
+      </tr>
+      <tr>
+        <th>End time:</th>
+        <td><%= task.end_time %></td>
+      </tr>
+      <tr>
+        <th>Status:</th>
+        <td><%= task.status %></td>
+      </tr>
+    </table>
+  </div>
 </div>
