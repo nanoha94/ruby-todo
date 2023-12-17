@@ -11,7 +11,7 @@
           </ul>
         </div>
       <% end %>
-      <% if params[:action] == "new" %>
+      <% if params[:action] == "new" || params[:action] == "create"  %>
         <div class="mb-3">
           <%= form.label :title, style: "display: block" %>
           <%= form.text_field :title, class: "form-control" %>
@@ -32,7 +32,7 @@
       <% if params[:action] == "edit" %>
         <div class="mb-3">
           <%= form.label :status, style: "display: block" %>
-          <%= form.number_field :status, class: "form-control" %>
+          <%= form.select :status, Task.statuses.keys, {}, {class: "form-control"} %>
         </div>
       <% end %>
       <div class="mb-3">
