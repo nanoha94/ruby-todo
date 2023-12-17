@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      task: ToDo
+    attributes:
+      task:
+        title: タイトル
+        description: 概要
+        start_time: 開始日
+        end_time: 期限
+        status: 進捗

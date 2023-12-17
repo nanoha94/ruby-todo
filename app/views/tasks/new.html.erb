@@ -1,6 +1,5 @@
-<h1>New task</h1>
+<h1>新規<%= t "activerecord.models.task" %></h1>
 <%= render "form", task: @task %>
-<br>
 <div>
-  <%= link_to "Back to tasks", tasks_path, class: "btn btn-secondary me-2" %>
+  <%= link_to "リストへ戻る", tasks_path, class: "btn btn-secondary me-2" %>
 </div>

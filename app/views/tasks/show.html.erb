@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
+<h1><%= t "activerecord.models.task" %>詳細</h1>
 <%= render @task %>
 <div class="d-flex">
-  <%= link_to "Edit this task", edit_task_path(@task), class: "btn btn-warning me-2" %>
-  <%= link_to "Back to tasks", tasks_path, class: "btn btn-secondary me-2" %>
-  <%= button_to "Destroy this task", @task, method: :delete, class: "btn btn-danger me-2", data: { turbo_confirm: "本当に削除しますか？" } %>
+  <%= link_to "この#{ t "activerecord.models.task" }を編集", edit_task_path(@task), class: "btn btn-warning me-2" %>
+  <%= link_to "リストへ戻る", tasks_path, class: "btn btn-secondary me-2" %>
+  <%= button_to "この#{ t "activerecord.models.task" }を削除", @task, method: :delete, class: "btn btn-danger me-2", data: { turbo_confirm: "本当に削除しますか？" } %>
+</div>

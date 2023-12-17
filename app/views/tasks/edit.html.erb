@@ -1,8 +1,7 @@
-<h1>Editing task</h1>
+<h1><%= t "activerecord.models.task" %>編集</h1>
 <%= render @task %>
 <%= render "form", task: @task %>
-<br>
 <div class="d-flex">
-  <%= link_to "Show this task", @task, class: "btn btn-primary me-2" %>
-  <%= link_to "Back to tasks", tasks_path, class: "btn btn-secondary me-2" %>
+  <%= link_to "#{ t "activerecord.models.task"}詳細", @task, class: "btn btn-primary me-2" %>
+  <%= link_to "リストへ戻る", tasks_path, class: "btn btn-secondary me-2" %>
 </div>
