@@ -1,20 +1,28 @@
 <nav class="navbar bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="/"><%= t "activerecord.models.task" %>リスト</a>
+  <div class="container align-items-start">
     <div>
-      <% if current_user %>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <%= button_to "ログアウト", destroy_user_session_path, class: "nav-link", method: :delete %>
-          </li>
-        </ul>
-      <% else %>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <%= link_to "ログイン", new_user_session_path, class: "nav-link" %>
-          </li>
-        </ul>
-      <% end %>
+      <a class="navbar-brand" href="/"><%= t "activerecord.models.task" %>リスト</a>
+      <div class="collapse my-3" id="navbarToggleExternalContent">
+        <% if current_user %>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <%= button_to "ログアウト", destroy_user_session_path, class: "nav-link py-1", method: :delete %>
+            </li>
+          </ul>
+        <% else %>
+          <ul class="navbar-nav ms-auto d-flex">
+            <li class="nav-item me-3">
+              <%= link_to "ログイン", new_user_session_path, class: "nav-link py-1" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "新規登録", new_user_registration_path, class: "nav-link py-1" %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
     </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
